@@ -123,8 +123,7 @@
         import { getFirestore, doc, setDoc, onSnapshot, collection, query, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
         import { setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-        // IMPORTANT: Replace the placeholder values below with your actual Firebase project configuration.
-        // You can find this in your Firebase console under Project settings -> General.
+        
         const firebaseConfig = {
             apiKey: "AIzaSyDN39Reafuyt9clV-ISPgYKQ1r94r8LPMY",
             authDomain: "learnly-ai-547ef.firebaseapp.com",
@@ -134,7 +133,7 @@
             appId: "1:748289039512:web:d1acde9acab1ed907b04ed"
         };
         const appId = firebaseConfig.projectId; // Use the project ID for the app ID in a local context
-        const apiKey = 'AIzaSyDUDqNOQIr3h1lONzSVan7GFRLgWu_uQWk'; // IMPORTANT: Replace this with your actual Gemini API key.
+        const apiKey = 'AIzaSyDUDqNOQIr3h1lONzSVan7GFRLgWu_uQWk'; 
 
         let app, db, auth, userId;
         const quizGenerationUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
@@ -163,7 +162,7 @@
         let score = 0;
         let answeredQuestions = 0;
 
-        // 🛠️ FIX: Always hide loading & re-enable button
+        //  FIX: Always hide loading & re-enable button
         function finishLoading() {
             loadingIndicator.classList.add('hidden');
             generateButton.disabled = false;
@@ -217,7 +216,7 @@
                    renderQuiz();
                    quizForm.classList.add('hidden');
                    quizContainer.classList.remove('hidden');
-                   finishLoading(); // ✅ Hide spinner after rendering
+                   finishLoading(); //  Hide spinner after rendering
               }
             }
           });
